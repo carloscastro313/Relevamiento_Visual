@@ -1,0 +1,15 @@
+<app-header titulo="Detalle" route="'../fotos-subidas'"></app-header>
+<ion-content class="ion-padding" color="light">
+    <div *ngIf="this.foto != null">
+        <ion-img [src]="foto.url"></ion-img>
+        <ion-text>
+            <h5>Fue publicado por: {{foto.correo}}</h5>
+        </ion-text>
+        <ion-text>
+            <h5>Fecha: {{foto.published}}</h5>
+        </ion-text>
+    </div>
+    <div *ngIf="this.foto == null || undefined">
+        <ion-spinner name="crescent"></ion-spinner>
+    </div>
+</ion-content>

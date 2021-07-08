@@ -1,0 +1,4 @@
+<app-header titulo="Votar cosa linda" route="../../../cosas-lindos" color="lindas"></app-header>
+<ion-content class="ion-padding" color="light">
+    <app-votar *ngIf="this.fotoElegida != null" (onLike)="like($event)" [(foto)]="this.fotoElegida"></app-votar>
+</ion-content>
